@@ -27,23 +27,25 @@ function setWaveform() {
   }
 }
 
+// startButton.addEventListener('click', function() {
+//   const oscillator = context.createOscillator();
+//   oscillator.frequency.setValueAtTime(220, 0);
+//   oscillator.connect(masterVolume);
+//   oscillator.start(0);
+//   oscillator.type = waveform;
+//   stopButton.addEventListener('click', function() {
+//     oscillator.stop(0);
+//     delete oscillator;
+//   });
+//   waveforms.forEach((waveformInput) => {
+//     waveformInput.addEventListener('change', function() {
+//       setWaveform();
+//       oscillator.type = waveform;
+//   	});
+// 	});
+// });
+
+
 startButton.addEventListener('click', function() {
-  const oscillator = context.createOscillator();
-  oscillator.frequency.setValueAtTime(220, 0);
-  oscillator.connect(masterVolume);
-  oscillator.start(0);
-  oscillator.type = waveform;
-  stopButton.addEventListener('click', function() {
-    oscillator.stop(0);
-    delete oscillator;
-  });
-  waveforms.forEach((waveformInput) => {
-    waveformInput.addEventListener('change', function() {
-      setWaveform();
-      oscillator.type = waveform;
-  	});
-	});
+    document.getElementById('start').style.backgroundColor('blue');
 });
-
-
-
